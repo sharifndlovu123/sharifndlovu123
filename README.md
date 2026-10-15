@@ -4,18 +4,31 @@
 
 I'm a Python and cloud engineer with production AWS and Django experience across QA, UAT and Production. I build and ship live government and commercial platforms, owning both the application and the infrastructure underneath it.
 
+🏢 Founder of **[DevBridge](https://devbridge.co.za)**, a Pretoria-based software and cloud infrastructure company building production systems for government and enterprise clients across South Africa.
+
 📫 Open to opportunities: hybrid or remote work in the Centurion / Pretoria area.
 
 ---
 
-## 🚀 What I've shipped
+## 🚀 Projects
 
 | Project | What it is | Highlights |
 | --- | --- | --- |
 | **Livi** · *live* | Multi-tenant citizen-services platform for the Office of the Premier, Mpumalanga | One Django deployment serving 10 departments across 30 subdomains · Celery Beat + Amazon MQ SLA escalation across 12 queues · SSE chat · Rekognition media gating · DRF mobile API on ECS Fargate |
-| **[e-PGLUM](https://epglum.co.za)** · *live* | Nationwide land-use and building-plan management system, live for CoGHSTA, Mpumalanga | Owned the full AWS estate (QA, UAT, Production) in a team of 7 · configurable workflow engine over a 96-form codebase · async S3 document pipeline · CloudFormation |
+| **e-PGLUM** · *live* | Nationwide land-use and building-plan management system, live for CoGHSTA, Mpumalanga | Owned the full AWS estate (QA, UAT, Production) in a team of 7 · configurable workflow engine over a 96-form codebase · async S3 document pipeline · CloudFormation |
 | **The Workplace Basics** | Django commerce & publishing platform | Paystack subscriptions with HMAC-SHA512 webhook verification · tiered access with JWT sessions · S3 presigned URLs · Celery + Redis |
-| **[Community Web Modernization](https://devbridge.co.za/community.html)** | Annual pro-bono programme: 6 sites for schools, churches, NGOs and sports clubs | Static sites on Cloudflare Pages · automatic HTTPS and DDoS protection · full source handover |
+| **Community Web Modernization** | Annual pro-bono programme: 6 sites for schools, churches, NGOs and sports clubs | Static sites on Cloudflare Pages · automatic HTTPS and DDoS protection · full source handover |
+
+Several of these are government systems, so I don't link them directly. Full write-ups are on my [portfolio](https://portfolio.devbridge.co.za).
+
+## 🧪 Products I'm building at DevBridge
+
+Our own products, with the codebases largely complete and now heading into users' hands. Feature additions and gap-filling follow once real feedback comes in.
+
+- **EO Risk Platform:** a B2B satellite-imagery analytics API that turns Earth observation data into property risk scores for insurers. One call returns a composite score, hazard exposure and the evidence behind them.
+- **Heavy Fleet Intelligence:** a white-label, multi-tenant, hardware-agnostic operational intelligence platform for mining and heavy logistics. It covers live telemetry, trip reconstruction, route compliance and stop analysis, using industrial gateways over CAN/J1939 and LTE.
+
+More at [devbridge.co.za](https://devbridge.co.za).
 
 ## 🛠️ Tech I work with
 
