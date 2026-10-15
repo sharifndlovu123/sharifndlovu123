@@ -122,29 +122,26 @@ ECS Fargate, Lambda, S3, EFS, RDS, ElastiCache, SQS, SNS, EventBridge, SES, Clou
 </details>
 
 <details>
-<summary><b>How I typically deploy a Django platform on AWS</b></summary>
+<summary><b>Azure bastion host: SSH into a private subnet</b></summary>
 <br>
 
-A generic pattern drawn from the systems above, not any one client's setup.
+A network-isolation pattern I built on Azure: only the bastion in the public subnet is reachable from the internet, and only from my own IP. The private instance has no public address at all.
 
 ```mermaid
 flowchart LR
-    U([Users]) --> CF[CloudFront]
-    CF --> WAF[AWS WAF]
-    WAF --> ALB[Application Load Balancer]
-    subgraph VPC
-        ALB --> WEB[ECS Fargate<br/>Django + Gunicorn]
-        WEB --> DB[(RDS PostgreSQL<br/>private subnet)]
-        WEB --> CACHE[(ElastiCache Redis)]
-        WEB --> MQ{{Message queue<br/>RabbitMQ / Amazon MQ}}
-        MQ --> WORKER[ECS Fargate<br/>Celery workers + Beat]
-        WORKER --> DB
+    ME([My machine<br/>single allowed IP]) -- "SSH :22" --> NSG1{{NSG: allow SSH<br/>from my IP only}}
+    subgraph VNET["Azure Virtual Network"]
+        subgraph PUB["Public subnet"]
+            NSG1 --> BASTION[Bastion VM<br/>public IP]
+        end
+        subgraph PRIV["Private subnet"]
+            NSG2{{NSG: allow SSH<br/>from bastion subnet only}} --> TARGET[Private VM<br/>no public IP]
+        end
+        BASTION -- "SSH jump" --> NSG2
     end
-    WEB --> S3[(S3 media<br/>presigned URLs)]
-    WORKER --> S3
 ```
 
-Provisioned with CloudFormation, deployed through scripted pipelines across QA, UAT and Production.
+Firewall rules (network security groups) restrict inbound SSH at both layers, so the private VM can only be reached by jumping through the bastion.
 
 </details>
 
