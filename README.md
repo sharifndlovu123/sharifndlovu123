@@ -110,22 +110,16 @@ Our own products, with the codebases largely complete and now heading into users
 | | |
 | --- | --- |
 | **Languages** | Python (expert), Java, JavaScript, C# (.NET MVC), Kotlin, SQL, Delphi |
+| **AWS compute & delivery** | ECS Fargate, Lambda, CloudFront, Route 53, ACM, CloudFormation |
+| **AWS storage & data** | S3, EFS, RDS, ElastiCache |
+| **AWS messaging & events** | SQS, SNS, EventBridge, SES |
+| **AWS security & ops** | IAM, KMS, Secrets Manager, WAF, CloudWatch, Rekognition |
 | **Data & messaging** | PostgreSQL, PostGIS, MySQL, Redis, pgvector, RabbitMQ, Amazon MQ, Celery |
 | **DevOps** | Docker, Git, GitHub Actions, CI/CD, Infrastructure as Code |
 
-<details>
-<summary><b>Full AWS service list</b></summary>
-<br>
+#### 🔐 Network isolation in practice: Azure bastion host
 
-ECS Fargate, Lambda, S3, EFS, RDS, ElastiCache, SQS, SNS, EventBridge, SES, CloudFront, Route 53, ACM, IAM, KMS, Secrets Manager, Rekognition, CloudWatch, CloudFormation, WAF
-
-</details>
-
-<details>
-<summary><b>Azure bastion host: SSH into a private subnet</b></summary>
-<br>
-
-A network-isolation pattern I built on Azure: only the bastion in the public subnet is reachable from the internet, and only from my own IP. The private instance has no public address at all.
+Only the bastion in the public subnet is reachable from the internet, and only from my own IP. The private VM has no public address, so the only way in is an SSH jump through the bastion.
 
 ```mermaid
 flowchart LR
@@ -141,9 +135,7 @@ flowchart LR
     end
 ```
 
-Firewall rules (network security groups) restrict inbound SSH at both layers, so the private VM can only be reached by jumping through the bastion.
-
-</details>
+Network security groups restrict inbound SSH at both layers.
 
 ### `04` &nbsp;Record
 
