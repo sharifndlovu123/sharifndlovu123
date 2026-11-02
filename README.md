@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Sharif Ndlovu — Cloud Infrastructure / DevOps Engineer" src="assets/banner-light.svg" width="100%">
+  <img alt="Sharif Ndlovu — Software Developer & Cloud/DevOps Engineer" src="assets/banner-light.svg" width="100%">
 </picture>
 
 <p>
-  Python and cloud engineer with production AWS and Django experience across QA, UAT and Production.
-  I ship live government and commercial platforms, owning both the application and the infrastructure underneath it.
+  Cloud and DevOps engineer and Python/Django developer who builds, releases and operates production platforms.
+  I'm the sole infrastructure engineer on two live government systems: I write the AWS infrastructure, run the deployments and monitor production across QA, UAT and Production, with security scanning built into every release.
 </p>
 
 <p>
@@ -35,38 +35,38 @@ Several of these are government systems, so I don't link them directly. Full wri
       <b>Livi</b> · <code>live</code><br>
       <sub>Multi-tenant citizen-services platform, Office of the Premier, Mpumalanga</sub>
       <ul>
-        <li>One Django deployment serving 10 departments across 30 subdomains</li>
-        <li>Celery Beat + Amazon MQ SLA escalation across 12 queues</li>
-        <li>SSE chat, Rekognition media gating, DRF mobile API on ECS Fargate</li>
+        <li>Sole infrastructure engineer: CloudFormation, GitHub Actions deployments and production monitoring</li>
+        <li>Security-gated releases: pip-audit and a Trivy image scan must pass before an image can be pushed</li>
+        <li>Contributed to the app: 10 departments on 30 subdomains, SLA escalation, SSE chat, automated upload screening with Rekognition</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <b>e-PGLUM</b> · <code>live</code><br>
       <sub>Nationwide land-use and building-plan management, live for CoGHSTA, Mpumalanga</sub>
       <ul>
-        <li>Owned the full AWS estate (QA, UAT, Production) in a team of 7</li>
-        <li>Configurable workflow engine over a 96-form codebase</li>
-        <li>Async S3 document pipeline, CloudFormation</li>
+        <li>Sole infrastructure engineer across QA, UAT and Production; sole maintainer since go-live</li>
+        <li>Migrated live infrastructure from AWS Copilot to standalone CloudFormation</li>
+        <li>Backend contributor in a team of 7: workflow engine over a 96-form codebase, async document pipeline</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b>The Workplace Basics</b><br>
-      <sub>Django commerce and publishing platform</sub>
+      <b>The Workplace Basics</b> · <code>not launched</code><br>
+      <sub>Django commerce and publishing platform (sole developer)</sub>
       <ul>
-        <li>Paystack subscriptions with HMAC-SHA512 webhook verification</li>
-        <li>Tiered access with JWT sessions</li>
-        <li>S3 presigned URLs, Celery + Redis</li>
+        <li>Paystack subscriptions with signature-verified webhooks</li>
+        <li>Tiered free and premium access</li>
+        <li>S3 media pipeline, Celery + Redis. The client cancelled before go-live; it became the groundwork for the government systems</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <b>Community Web Modernization</b> · <code>pro bono</code><br>
-      <sub>Annual programme: 6 sites for schools, churches, NGOs and sports clubs</sub>
+      <sub>Programme: 6 sites for schools, churches, NGOs and sports clubs</sub>
       <ul>
-        <li>Static sites on Cloudflare Pages</li>
-        <li>Automatic HTTPS and DDoS protection</li>
-        <li>Full source handover</li>
+        <li>Static sites on Cloudflare, no server or database to attack</li>
+        <li>Full source handover so each organisation can maintain its own site</li>
+        <li><a href="https://www.devbridge.co.za/community">The programme</a> · example: <a href="https://rehobothboerdery.co.za/">Rehoboth Boerdery</a></li>
       </ul>
     </td>
   </tr>
@@ -91,7 +91,18 @@ Our own products, with the codebases largely complete and now heading into users
   </tr>
 </table>
 
-### `03` &nbsp;Stack
+### `03` &nbsp;Personal projects
+
+Self-directed and public on GitHub.
+
+- **[siteward](https://github.com/sharifndlovu123/siteward)**: self-hostable passive web security scanner with JSON, Markdown and HTML export.
+- **[speedward](https://github.com/sharifndlovu123/speedward)**: self-hostable website performance tester with a global map.
+- **[NetPulse](https://github.com/sharifndlovu123/iot_monitoring)**: Django platform that discovers and monitors devices on a local network.
+- **[Remote Workstation Anywhere](https://github.com/sharifndlovu123/Remote-Workstation-Anywhere-)**: wake and connect to a home desktop with Tailscale, Wake-on-LAN, RDP and a Raspberry Pi gateway.
+- **[aws-playground](https://github.com/sharifndlovu123/aws-playground)**: dozens of AWS services explored through the CLI, infrastructure as code and SDKs.
+- **[terraform_associate](https://github.com/sharifndlovu123/terraform_associate)**: code-first study notes and runnable examples.
+
+### `04` &nbsp;Stack
 
 <p>
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
@@ -115,7 +126,9 @@ Our own products, with the codebases largely complete and now heading into users
 | **AWS messaging & events** | SQS, SNS, EventBridge, SES |
 | **AWS security & ops** | IAM, KMS, Secrets Manager, WAF, CloudWatch, Rekognition |
 | **Data & messaging** | PostgreSQL, PostGIS, MySQL, Redis, pgvector, RabbitMQ, Amazon MQ, Celery |
-| **DevOps** | Docker, Git, GitHub Actions, CI/CD, Infrastructure as Code |
+| **DevOps & IaC** | Docker, Git, GitHub Actions, CI/CD, CloudFormation, Terraform, Bash |
+| **DevSecOps** | Trivy, pip-audit, AWS WAF |
+| **Monitoring & Linux** | CloudWatch, production troubleshooting, Linux administration and hardening |
 
 #### 🔐 Network isolation in practice: Azure bastion host
 
@@ -137,7 +150,7 @@ flowchart LR
 
 Network security groups restrict inbound SSH at both layers.
 
-### `04` &nbsp;Record
+### `05` &nbsp;Record
 
 <table>
   <tr>
@@ -160,14 +173,14 @@ Network security groups restrict inbound SSH at both layers.
       </ul>
       <b>Currently (2026)</b>
       <ul>
-        <li>Studying: AZ-204 Azure Developer · CompTIA Linux+ · HashiCorp Terraform Associate · Bash</li>
-        <li>Up next: Kubernetes · Jenkins CI/CD · Firebase &amp; NoSQL</li>
+        <li>In progress: AZ-104 Azure Administrator</li>
+        <li>2027: CompTIA Linux+ · HashiCorp Terraform Associate · Kubernetes &amp; Helm · Prometheus &amp; Grafana · OpenTelemetry · Jenkins · advanced DevSecOps · reliability engineering</li>
       </ul>
     </td>
   </tr>
 </table>
 
-### `05` &nbsp;Knowledge base
+### `06` &nbsp;Knowledge base
 
 I keep my study notes in public at **[knowledgebase.devbridge.co.za](https://knowledgebase.devbridge.co.za)**: a regularly updated hub covering cloud, databases, Linux, networking, orchestration and programming. They're rough working notes, tidied with an LLM, written as I learn.
 
