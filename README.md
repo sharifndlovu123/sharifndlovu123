@@ -1,7 +1,9 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Sharif Ndlovu — Software Developer & Cloud/DevOps Engineer" src="assets/banner-light.svg" width="100%">
-</picture>
+<a href="https://gravatar.com/sharifndlovu">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/gravatar-card-dark.svg">
+    <img alt="Sharif Ndlovu — Cloud Infrastructure &amp; DevOps Engineer, DevBridge · South Africa. Gravatar profile card." src="assets/gravatar-card-light.svg" width="100%">
+  </picture>
+</a>
 
 <p>
   Cloud and DevOps engineer and Python/Django developer who builds, releases and operates production platforms.
